@@ -1,0 +1,72 @@
+.title {
+  float: left;
+  padding: 0 100px;
+  text-align: center;
+}
+
+.menu {
+  float: right;
+}
+
+.menu .hamburger-btn {
+  display: none;
+}
+
+.menu .hamburger-icon {
+  display: inline-block;
+  position: relative;
+  padding: 30px 100px;
+}
+
+/* hamburger icon */
+.menu .hamburger-icon .navicon {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 3px;
+  background: gray;
+}
+
+.menu .hamburger-icon .navicon:before,
+.menu .hamburger-icon .navicon:after {
+  content: '';
+  position: absolute;
+  display: block;
+  left: 0;
+  width: 30px;
+  height: 3px;
+  background: gray;
+  transition: all .2s ease-out;
+}
+
+.menu .hamburger-icon .navicon:before {
+  top: -10px;
+}
+
+.menu .hamburger-icon .navicon:after {
+  top: 10px;
+}
+
+/* close icon */
+.menu .hamburger-btn:checked ~ .hamburger-icon .navicon {
+  background: transparent;
+}
+
+.menu .hamburger-btn:checked ~ .hamburger-icon .navicon:before,
+.menu .hamburger-btn:checked ~ .hamburger-icon .navicon:after {
+  top: 0;
+}
+
+.menu .hamburger-btn:checked ~ .hamburger-icon .navicon:before {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.menu .hamburger-btn:checked ~ .hamburger-icon .navicon:after {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.menu .dropdown-menu {
+  
+}
