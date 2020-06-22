@@ -1,3 +1,7 @@
+header {
+  height: 100px;
+}
+
 .title {
   float: left;
   padding: 0 100px;
@@ -13,8 +17,8 @@
 }
 
 .menu .hamburger-icon {
-  display: inline-block;
   position: relative;
+  display: inline-block;
   padding: 30px 100px;
 }
 
@@ -31,7 +35,6 @@
 .menu .hamburger-icon .navicon:after {
   content: '';
   position: absolute;
-  display: block;
   left: 0;
   width: 30px;
   height: 3px;
@@ -68,5 +71,26 @@
 }
 
 .menu .dropdown-menu {
-  
+  padding: 0px 100px 0px 50px;
+  position: absolute;
+  margin: 0;
+  list-style: none;
+  overflow: hidden;
+  max-height: 0;
+  background-color: gray;
+  z-index: 1;
+  transition: max-height .2s ease-out;
+}
+
+.menu .hamburger-btn:checked ~ .dropdown-menu {
+  max-height: 250px;
+}
+
+.menu .dropdown-menu li {
+  font-size: 20px;
+  padding: 15px 0;
+}
+
+.content {
+  padding: 0 100px;
 }
